@@ -78,6 +78,7 @@ span {
     font-size: 25px;
     color: palevioletred;
     margin-top: 10px;
+    text-align: center;
 }
 
 .content-container {
@@ -124,7 +125,7 @@ table, th, td {
     width: 30px; /* chiều rộng của mỗi ô */
     height: 10px;
     color: palevioletred;
-    /*font-weight: bold;*/
+    font-weight: bold;
     text-align: center;
     font-size: 23px; 
   }
