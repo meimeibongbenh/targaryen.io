@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.navbar img {
+    height: 120px;
+}
+
+ul {
+    display: flex;
+    gap: 25px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: palevioletred;
+}
+
+.banner {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    margin-top: 1%;
+}
+
+span {
+    color: palevioletred;
+}
+
+.left-column,
+.right-column {
+    flex-basis: 50%;
+}
+
+.smr {
+    font-size: 25px;
+    color: palevioletred;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.content-container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.link-container p {
+    font-size: 20px;
+    color: palevioletred;
+    margin: 10px 0;
+}
+
+.right-column img {
+    width: 100%;
+    max-width: 500px;
+    margin-right: 2%;
+    margin-bottom: 10%;
+}
+
+.left-column img {
+    width: 100%;
+    max-width: 500px;
+    margin-left: 2%;
+    margin-bottom: 10%;
+}
+
+table,
+th,
+td {
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+    padding: 5px;
+    /* tăng khoảng cách bên trong ô */
+    width: 30px;
+    /* chiều rộng của mỗi ô */
+    height: 10px;
+    color: palevioletred;
+    text-align: center;
+    font-size: 23px;
+}
+
+.subject {
+    text-decoration: none;
+    color: palevioletred;
+}
+
+footer {
+    text-align: center;
+    color: palevioletred;
+    padding: 10px 0;
+    background-color: #f7f7f7;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+
+table {
+    width: 100%;
+    margin: 20px 0;
+}
+
+thead th {
+    background-color: #fcfdff;
+    color: #333;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: lighter;
+}
+
+tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 1em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Các màu sắc cho các thuộc tính */
+.simple {
+    background-color: #D1DEE6;
+    color: #93A5B1;
+    border-radius: 13px;
+}
+
+.elegant {
+    background-color: #E9EAFE;
+    color: #93A5B1;
+    border-radius: 10px;
+}
+
+.mature {
+    background-color: #FB7A76;
+    color: #fdfdfd;
+    border-radius: 10px;
+}
+
+.sexy {
+    background-color: #AAA3CB;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.cool {
+    background-color: #b3e5fc;
+    color: #3296d8;
+    border-radius: 10px;
+}
+
+.lively {
+    background-color: #FFE683;
+    color: #FF6F4F;
+    border-radius: 10px;
+}
+
+.cute {
+    background-color: #FFE4E0;
+    color: #FF6F7F;
+    border-radius: 10px;
+}
+
+.gorgeous {
+    background-color: #EEB362;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.warm {
+    background-color: #FFDCB5;
+    color: #FD763C;
+    border-radius: 10px;
+}
+
+.pure {
+    background-color: #DEF3D6;
+    color: #84AA9C;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: 90%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .navbar img {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .left-column h1 {
+        font-size: 36px;
+    }
+
+    .left-column h3 {
+        font-size: 20px;
+    }
+
+    .smr {
+        font-size: 16px;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .smhr {
+        width: 80%;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social img {
+        width: 25px;
+        margin: 5px;
+    }
+
+    .ig {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .smr {
+        font-size: 16px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    table {
+        border: none;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tbody tr {
+        margin-bottom: 10px;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    tbody td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #333;
+        flex-basis: 50%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: 90%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    .smr {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .content-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    table, th, td {
+        font-size: 16px;
+        padding: 10px;
+        width: auto;
+        height: auto;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 10px;
+        position: relative;
+    }
+}
