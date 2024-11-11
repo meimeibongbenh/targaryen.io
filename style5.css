@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    background-image: url('');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.hero {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.navbar img {
+    height: 120px;
+}
+
+ul {
+    display: flex;
+    gap: 25px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: palevioletred;
+}
+
+.banner {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    margin-top: 1%;
+}
+
+span {
+    color: palevioletred;
+}
+
+.left-column,
+.right-column {
+    flex-basis: 50%;
+}
+
+.smr {
+    font-size: 25px;
+    color: palevioletred;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.content-container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%; 
+    max-width: 1200px;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.link-container p {
+    font-size: 20px;
+    color: palevioletred;
+    margin: 10px 0;
+}
+
+.right-column img {
+    width: 100%;
+    max-width: 500px;
+    margin-right: 2%;
+    margin-bottom: 10%;
+}
+
+.left-column img {
+    width: 100%;
+    max-width: 500px;
+    margin-left: 2%;
+    margin-bottom: 10%;
+}
+
+table, th, td {
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+    padding: 5px; 
+    width: 30px; 
+    height: 10px;
+    color: palevioletred;
+    text-align: center;
+    font-size: 23px; 
+  }
+
+.subject {
+    text-decoration: none;
+    color: palevioletred;
+}
+
+footer {
+    text-align: center;
+    color: palevioletred;
+    padding: 10px 0;
+    background-color: #f7f7f7;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+.calculator input {
+    width: 100%; 
+    max-width: 400px; 
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 23px;
+    box-sizing: border-box; 
+}
+
+.calculator button {
+    width: 100%; 
+    max-width: 400px; 
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: palevioletred;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    box-sizing: border-box; 
+}
+
+.calculator button:hover {
+    background-color: #d74d6b;
+}
+
+.calculator .result {
+    margin-top: 23px;
+    font-size: 24px;
+    font-weight: bold;
+    color: palevioletred;
+}
+
+.rules-container {
+    margin-top: 20px; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid palevioletred;
+}
+
+
+.rules-container h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.rules-container ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 0;
+}
+
+.rules-container li {
+    font-size: 23px;
+    max-width: 250px;
+    text-align: left; 
+    line-height: 1.5;
+}
+
+.rules-container li::before {
+    content: "✔"; 
+    margin-right: 8px;
+    color: palevioletred;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: 90%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .navbar img {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .left-column h1 {
+        font-size: 36px;
+    }
+
+    .left-column h3 {
+        font-size: 20px;
+    }
+
+    .smr {
+        font-size: 16px;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .smhr {
+        width: 80%;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social img {
+        width: 25px;
+        margin: 5px;
+    }
+
+    .ig {
+        width: 100%;
+    }
+}
