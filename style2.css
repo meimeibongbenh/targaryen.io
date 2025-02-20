@@ -12,6 +12,7 @@ body {
     
 }
 
+
 .hero {
     width: 80%;
     max-width: 1200px;
@@ -125,7 +126,6 @@ table, th, td {
     width: 30px; /* chiều rộng của mỗi ô */
     height: 10px;
     color: palevioletred;
-    font-weight: bold;
     text-align: center;
     font-size: 23px; 
   }
@@ -149,6 +149,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 
 @media (max-width: 768px) {
     .hero {
@@ -208,5 +209,9 @@ footer {
     .social img {
         width: 25px;
         margin: 5px;
+    }
+
+    .ig {
+        width: 100%;
     }
 }

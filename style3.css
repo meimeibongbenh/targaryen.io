@@ -9,7 +9,6 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    
 }
 
 .hero {
@@ -118,6 +117,13 @@ span {
     margin-bottom: 10%;
 }
 
+.centered-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
 table, th, td {
     border: 2px solid palevioletred;
     border-radius: 10px;
@@ -126,9 +132,9 @@ table, th, td {
     height: 10px;
     color: palevioletred;
     text-align: center;
-    font-size: 23px; 
+    font-size: 22px; 
     border-collapse: collapse;
-  }
+}
 
 .subject {
     text-decoration: none;
