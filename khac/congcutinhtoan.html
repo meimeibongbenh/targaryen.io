@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targaryen - Fire and Blood</title>
+    <link rel="stylesheet" href="../style5.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+</head>
+
+<body>
+    <a style="display: scroll; position: fixed; bottom: 3px; right: 7px;" title="Back to Top" href="#"><img style="width: 17%;margin-bottom: 12%;
+    margin-left: 80%;" src="../image/pgup.png" alt="" /></a>
+    <div class="hero">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="index.html"><img src="../image/Logo.png" alt="logo_image"></a>
+            <ul>
+                <li><a href="../trangchu.html">Trang Chủ</a></li>
+                <li><a href="../khuthidau.html">Khu Thi Đấu</a></li>
+                <li><a href="../changchinh.html">Chặng Chính</a></li>
+                <li><a href="../changhoi.html">Chặng Hội</a></li>
+                <li><a href="../sukien.html">Sự Kiện</a></li>
+                <li><a href="../khac.html">Khác</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <hr style="margin-top: -3%;">
+        <p style="margin-top: 2%;font-size: 20px;">Cập nhập lần cuối: 11/11/2024</p>
+        <div class="content-container">
+            <h1 style="font-size: 90px;margin-top: -3%;">Công Cụ <span>Tính Toán</span></h1>
+            <p class="smr">Công cụ tính toán tổn thất sự kiện 
+            </p>
+            <div class="rules-container">
+                <h3>Quy tắc tính toán</h3>
+                <ul>
+                    <li>Công cụ chỉ thực hiện các phép tính cho sự kiện có mốc hoặc đạo cụ được xác định</li>
+                    <li>Số đạo yêu cầu là số đạo cụ cần để full sự kiện (tương tự là mốc đối với event theo mốc)</li>
+                    <li>Đạo cụ nhận mỗi lượt sẽ tùy thuộc vào event mọi người xem xét nhập cho phù hợp</li>
+                    <li>Số đạo cụ miễn phí còn lại là số đạo cụ bạn sẽ nhận thêm được từ lượt miễn phí nếu như chưa phải ngày cuối</li>
+                    <li>Số đạo cụ đang có là số đạo cụ bạn đang sở hữu</li>
+                    <li>Giá 1 lượt là giá để mua thêm 1 lượt sự kiện</li>
+                </ul>
+            </div>
+            <h1 style="margin-top: 10%;margin-bottom: 1%;">Tính Toán<span> Tổn Thất</span></h1>
+            <div class="calculator">
+                <h3 style="font-size: 30px;margin-bottom: 2%;">Tính toán tổn thất</h3>
+
+                <input type="number" id="requestCount" placeholder="Số đạo cụ (lượt) yêu cầu" min="0" required>
+                <input type="number" id="currentCount" placeholder="Số đạo cụ (lượt) đang có" min="0" required>
+                <input type="number" id="freeCount" placeholder="Số đạo cụ (lượt) miễn phí còn lại" min="0" required>
+                <input type="number" id="itemsPerTurn" placeholder="Số đạo cụ nhận 1 lượt" min="1" required>
+                <input type="number" id="pricePerTurn" placeholder="Giá 1 lượt" min="0" required>
+
+                <button class="calculate-btn" onclick="calculateTurns()">Tính toán</button>
+                <button class="reset-btn" onclick="resetForm()">Nhập lại</button>
+
+                <div class="result" id="result"></div>
+            </div>
+
+            <script>
+                function calculateTurns() {
+                    const requestCount = parseFloat(document.getElementById("requestCount").value);
+                    const currentCount = parseFloat(document.getElementById("currentCount").value);
+                    const freeCount = parseFloat(document.getElementById("freeCount").value);
+                    const itemsPerTurn = parseFloat(document.getElementById("itemsPerTurn").value);
+                    const pricePerTurn = parseFloat(document.getElementById("pricePerTurn").value);
+
+                    if (isNaN(requestCount) || isNaN(currentCount) || isNaN(freeCount) || isNaN(itemsPerTurn) || isNaN(pricePerTurn)) {
+                        document.getElementById("result").innerText = "Vui lòng nhập đầy đủ các thông tin";
+                    } else {
+                        const turnsNeeded = (requestCount - currentCount - freeCount) / itemsPerTurn;
+                        const totalPrice = Math.round(turnsNeeded * pricePerTurn);
+                        document.getElementById("result").innerText = "Tổn thất: " + totalPrice + " 💎";
+                    }
+                }
+
+                function resetForm() {
+                    document.getElementById("requestCount").value = "";
+                    document.getElementById("currentCount").value = "";
+                    document.getElementById("freeCount").value = "";
+                    document.getElementById("itemsPerTurn").value = "";
+                    document.getElementById("pricePerTurn").value = "";
+                    document.getElementById("result").innerText = "";
+                }
+            </script>
+</body>
+<footer>
+    © 2024 Targaryen - All Rights Reserved
+</footer>
+
+</html>
