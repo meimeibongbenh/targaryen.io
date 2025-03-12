@@ -15,28 +15,38 @@ function toggleContent(element) {
 document.addEventListener("DOMContentLoaded", function () {
     const stars = document.querySelectorAll(".star-icon");
 
-    // Lấy danh sách món đã sở hữu từ localStorage
+    // Kiểm tra và lấy dữ liệu từ localStorage, nếu null thì đặt là {}
     let ownedItems = JSON.parse(localStorage.getItem("ownedItems")) || {};
 
-    // Cập nhật giao diện dựa trên dữ liệu đã lưu
-    stars.forEach(star => {
-        let itemName = star.getAttribute("data-item");
-        if (ownedItems[itemName]) {
-            star.classList.add("owned");
-        }
+    // Cập nhật giao diện theo dữ liệu đã lưu
+    function updateStars() {
+        stars.forEach(star => {
+            let itemName = star.getAttribute("data-item");
+            star.classList.toggle("owned", !!ownedItems[itemName]); // Toggle dựa vào dữ liệu
+        });
+    }
 
-        // Xử lý khi người dùng click vào sao
+    // Gán sự kiện click để đánh dấu hoặc bỏ đánh dấu
+    stars.forEach(star => {
         star.addEventListener("click", function () {
+            let itemName = this.getAttribute("data-item");
+
             if (ownedItems[itemName]) {
                 delete ownedItems[itemName]; // Bỏ sở hữu
-                star.classList.remove("owned");
             } else {
                 ownedItems[itemName] = true; // Đánh dấu sở hữu
-                star.classList.add("owned");
             }
 
-            // Lưu vào localStorage
-            localStorage.setItem("ownedItems", JSON.stringify(ownedItems));
+            localStorage.setItem("ownedItems", JSON.stringify(ownedItems)); // Lưu lại
+            updateStars(); // Cập nhật lại giao diện ngay lập tức
         });
+    });
+
+    updateStars(); // Gọi lần đầu khi tải trang
+
+    // Đồng bộ dữ liệu khi mở tab khác hoặc thay đổi localStorage
+    window.addEventListener("storage", function () {
+        ownedItems = JSON.parse(localStorage.getItem("ownedItems")) || {};
+        updateStars(); // Cập nhật giao diện ngay lập tức
     });
 });
