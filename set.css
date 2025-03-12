@@ -284,6 +284,19 @@ footer {
     margin-bottom: -10px;
 }
 
+.star-icon {
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 12%;
+    transition: color 0.3s;
+}
+
+.star-icon.owned {
+    color: gold;
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
