@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 150vh;
+}
+
+.hero, .content-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.container {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center-align the navigation */
+    align-items: center;
+    padding: 10px 40px;
+    font-size: large;
+
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: palevioletred;
+}
+
+.banner {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    margin-top: 1%;
+}
+
+span {
+    color: palevioletred;
+}
+
+.smr {
+    font-size: 25px;
+    color: palevioletred;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.content-container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 100%;
+}
+
+.toggle-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 2px 0;
+}
+
+.toggle-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(248, 138, 184);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.toggle-text {
+    font-size: 20px;
+    color: #fbfcfa;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.toggle-content {
+    display: none;
+    padding: 10px;
+}
+
+.cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cell:last-child {
+    border-right: none;
+}
+
+.rating-item {
+    text-align: center;
+}
+
+.label {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.item img {
+    margin-left: 5%;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    flex: 1;
+}
+
+.item span {
+    margin-left: 0;
+    white-space: normal;
+    font-size: 20px;
+    font-weight: bold;
+    color: #df4aad;
+}
+
+.additional-info {
+    padding: 10px; 
+    background-color: #f0f8ff; 
+    border-radius: 8px; 
+    margin-top: 5px; 
+}
+
+.additional-info div {
+    font-size: 16px;
+    color: black; 
+    margin-bottom: 5px; 
+}
+
+.additional-info strong {
+    color: black; 
+    font-weight: bold; 
+}
+
+hr {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    color: palevioletred;
+    padding: 10px 0;
+    background-color: #f7f7f7;
+    font-size: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.item {
+    font-size: 21px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.item1 {
+    margin-top: 2%;
+}
+
+.smr {
+    font-size: 25px;
+    color: palevioletred;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.centered-image {
+    display: block;
+    margin: 10px auto;
+    width: 50%; /* Chỉ hiển thị 50% trên máy tính */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+}
+
+.left-image {
+    display: block;
+    margin: 10px auto;
+    width: 40%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .navbar img {
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .left-column h1 {
+        font-size: 36px;
+    }
+
+    .left-column h3 {
+        font-size: 20px;
+    }
+
+    .smr {
+        font-size: 16px;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .smhr {
+        width: 80%;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social img {
+        width: 25px;
+        margin: 5px;
+    }
+
+    .centered-image {
+        width: 100%; /* Trên điện thoại hiển thị 100% */
+    }
+
+    .left-image {
+        width: 100%; /* Trên điện thoại hiển thị 80% để vừa màn hình */
+        margin: 10px auto;
+    }
+    
+}
