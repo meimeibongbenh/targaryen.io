@@ -266,6 +266,24 @@ footer {
     margin-top: 2%;
 }
 
+.centered-image {
+    display: block;
+    margin: 10px auto;
+    width: 50%; /* Chỉ hiển thị 50% trên máy tính */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+}
+
+.left-image {
+    display: block;
+    margin: 10px auto;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -322,5 +340,14 @@ footer {
     .social img {
         width: 25px;
         margin: 5px;
+    }
+
+    .centered-image {
+        width: 100%; /* Trên điện thoại hiển thị 100% */
+    }
+
+    .left-image {
+        width: 100%; /* Trên điện thoại hiển thị 80% để vừa màn hình */
+        margin: 10px auto;
     }
 }
